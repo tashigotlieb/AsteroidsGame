@@ -1,7 +1,7 @@
 //your variable declarations here
+Floater floaters = new Floater();
 Spaceship joe = new Spaceship();
 Star[] stars = new Star[200];
-Floater floaters = new Floater();
 Asteriod[] asteriods = new Asteriod[20];
 //ArrayList <Asteriod> AsteroidList = new ArrayList<Asteriod>();
 //Asteriod a1 = new Asteriod();
