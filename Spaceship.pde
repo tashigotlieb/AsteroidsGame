@@ -26,4 +26,10 @@ myPointDirection = 1;
      myYspeed = s;
 
   }
+public float getCenterX() {
+  return (float)myCenterX;
+}
+ public float getCenterY() {
+  return (float)myCenterY;
+} 
 }
