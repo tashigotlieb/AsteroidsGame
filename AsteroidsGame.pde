@@ -5,7 +5,7 @@ Star[] stars = new Star[200];
 Asteriod[] asteriods = new Asteriod[20];
 //ArrayList <Asteriod> AsteroidList = new ArrayList<Asteriod>();
 //Asteriod a1 = new Asteriod();
-//AsteroidList.add(a1); Why does this now work???
+//AsteroidList.add(a1); Why does this not work???
  
 public void setup() 
 {
