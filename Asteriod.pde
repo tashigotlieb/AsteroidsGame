@@ -27,11 +27,11 @@ myPointDirection = 1;
 turn(rotationSpeed);
 super.move();
  }
-public double getCenterX() {
-  return myCenterX;
+public float getCenterX() {
+  return (float)myCenterX;
 }
- public double getCenterY() {
-  return myCenterY;
+ public float getCenterY() {
+  return (float)myCenterY;
 } 
  
 }
