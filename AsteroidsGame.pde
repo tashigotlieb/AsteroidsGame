@@ -2,8 +2,9 @@
 Floater floaters = new Floater();
 Spaceship joe = new Spaceship();
 Star[] stars = new Star[200];
-//Asteriod[] asteriods = new Asteriod[20];
 ArrayList <Asteriod> AL = new ArrayList <Asteriod>();
+Bullet tom = new Bullet(joe);
+ArrayList <Bullet> bulletList = new ArrayList();
 
 public void setup() 
 {
@@ -31,11 +32,12 @@ public void setup()
 public void draw() 
 {
    background(255);
-     joe.show();
+  joe.show();
   joe.move();
   for(int i = 0; i < 100; i++) {
      stars[i].show();
-  }
+  } 
+
   for(int i = 0; i<AL.size(); i++) {
   AL.get(i).move();
   AL.get(i).show();
@@ -43,9 +45,21 @@ public void draw()
   if(a < 20) {
   AL.remove(i);
   }
- 
-}
+   for(int j =0; j< bulletList.size(); j++) {
+      bulletList.get(j).move();
+     bulletList.get(j).show();
+   }
 
+  for(int z =0; z< AL.size(); z++) {  
+    for(int j =0; j< bulletList.size(); j++) {
+   if((dist((float)(bulletList.get(j).getCenterX()), (float)(bulletList.get(j).getCenterY()), (float)(AL.get(z).getCenterX()), (float)(AL.get(z).getCenterY())) < 20)) {
+     AL.remove(z);
+     bulletList.remove(j);
+ break;
+}
+  }
+  }
+  }
 
 
 }
@@ -67,4 +81,11 @@ public void keyPressed() {
   joe.hyperspace();
   joe.setSpeed(1);
   }
+if(key == 'b') {
+bulletList.add(new Bullet(joe)); 
+
+}
+
+  
+
 }
